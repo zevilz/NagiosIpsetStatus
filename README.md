@@ -44,7 +44,7 @@ Log file is required for show ipset sets info because the nagios user does not h
 
 Than add script to cron
 ```bash
-*/1 * * * * bash <full_path_to_script> -p <full_path_to_log_file> -s <ipset_set_name>
+*/1 * * * * /bin/bash <full_path_to_script> -p <full_path_to_log_file> -s <ipset_set_name>
 ```
 
 Script creates/updates log file in specified path and make it readable only for users in `nagios` group and for user `nagios`.
